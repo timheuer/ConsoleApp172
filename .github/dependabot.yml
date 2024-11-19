@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps"
+    allow:
+      - dependency-type: "all"
+    labels:
+      - "dependencies"
+    rebase-strategy: "auto"
+    target-branch: "main"
